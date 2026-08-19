@@ -12,12 +12,7 @@ WorkBuddy 绿皮书是一份**单文件 HTML 电子书**，系统梳理腾讯 AI
 
 ## 快速访问
 
-| 渠道 | 地址 |
-|------|------|
-| GitHub Pages | https://workbuddy.wangjin.site |
-| EdgeOne 加速版 | （待 CNB 导入后绑定） |
-
-> **提示**：国内访问建议走 EdgeOne 加速域名（见下方部署说明）。
+👉 **https://workbuddy.wangjin.site**
 
 ## 内容概览
 
