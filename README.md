@@ -12,7 +12,7 @@ WorkBuddy 绿皮书是一份**单文件 HTML 电子书**，系统梳理腾讯 AI
 
 ## 快速访问
 
-👉 **https://workbuddy.wangjin.site**
+👉 **https://workbuddy-green-book.wangjn.site**
 
 ## 内容概览
 
