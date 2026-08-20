@@ -12,7 +12,7 @@ WorkBuddy 绿皮书是一份**单文件 HTML 电子书**，系统梳理腾讯 AI
 
 ## 快速访问
 
-👉 **https://workbuddy-green-book.wangjn.site**
+👉 **https://mywebsite-czco0bz4.edgeone.cool**
 
 ## 内容概览
 
@@ -29,16 +29,20 @@ WorkBuddy 绿皮书是一份**单文件 HTML 电子书**，系统梳理腾讯 AI
 
 本项目支持两种部署方式：
 
-### A. GitHub Pages（当前生效）
+### A. GitHub Pages（备份）
 
-仓库已配置 CNAME → `workbuddy.wangjin.site`，GitHub Pages 自动构建。
+仓库已配置 CNAME → `workbuddy.wangjin.site`，GitHub Pages 自动构建（作为备份源）。
 
-### B. CNB + EdgeOne 全球加速（推荐）
+### B. CNB + EdgeOne 全球加速（当前官方站点）
+
+绿皮书已部署至 EdgeOne Pages，官方访问地址：
+
+> **https://mywebsite-czco0bz4.edgeone.cool**
 
 1. 登录 [cnb.cool](https://cnb.cool) → 新建仓库 → **导入外部仓库**
 2. 填入：`https://github.com/GoodTimeGGB/workbuddy-green-book`
 3. 导入后 CNB 自动识别 `.cnb.yml` 流水线，一键部署至 EdgeOne Pages
-4. 到 DNSPod 将 `workbuddy.wangjin.site` 的 CNAME 改为 EdgeOne 提供的加速域名
+4. （可选）如需自有域名，再到 DNSPod 将自定义域名的 CNAME 改为 EdgeOne 提供的加速域名
 
 详细步骤见仓库内 [`CNB-EDGEONE-部署说明.md`](./CNB-EDGEONE-部署说明.md)
 
