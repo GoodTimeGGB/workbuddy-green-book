@@ -9,14 +9,14 @@
 
 ```
 读者浏览器
-   │  https://mywebsite-czco0bz4.edgeone.cool/        ← 官方站点（EdgeOne 默认域名）
+   │  https://wangjn.site/tools/workbuddy.html        ← 官方站点（站点路径，后端 EdgeOne）
    ▼
 EdgeOne（免费版：国内节点 + 全球加速 + 自动 HTTPS + DDoS/WAF）  ← 加速层 + 源站
    ▼
 CNB 仓库（cnb.cool）+ EdgeOne Pages（托管绿皮书静态文件）        ← 源码
 ```
 
-> 如需自有域名（如 workbuddy.wangjin.site），再在 EdgeOne 绑自定义域名 + DNSPod 改 CNAME 即可。目前直接用 EdgeOne 默认域名。
+> 如需自有域名，再在 EdgeOne 绑自定义域名 + DNSPod 改 CNAME 即可。目前对外官方入口统一为 `https://wangjn.site/tools/workbuddy.html`（站点路径，后端 EdgeOne）。
 
 两种方式任选其一：
 
@@ -55,8 +55,8 @@ CNB Pages 作为源站，EdgeOne 仅做 CDN 加速（CNAME 接入）。
 5. **（可选）改 DNS**
    - 去腾讯云 DNSPod，把自定义域名的 CNAME 值
      **改成第 4 步 EdgeOne 给的加速域名**。
-   - 等 5–30 分钟传播，访问自定义域名即上线；当前默认官方地址为
-     `https://mywebsite-czco0bz4.edgeone.cool`。
+   - 等 5–30 分钟传播，访问自定义域名即上线；当前官方入口为
+     `https://wangjn.site/tools/workbuddy.html`。
    - 生效后 EdgeOne 自动签发 HTTPS，控制台勾选 Enforce HTTPS。
 
 6. **自动部署**
