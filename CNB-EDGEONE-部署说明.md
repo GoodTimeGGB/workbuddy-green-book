@@ -9,14 +9,14 @@
 
 ```
 读者浏览器
-   │  http://workbuddy.wangjin.site/
+   │  https://mywebsite-czco0bz4.edgeone.cool/        ← 官方站点（EdgeOne 默认域名）
    ▼
-腾讯云 DNSPod（CNAME: workbuddy → EdgeOne 加速域名）   ← 你已加过，改指向即可
+EdgeOne（免费版：国内节点 + 全球加速 + 自动 HTTPS + DDoS/WAF）  ← 加速层 + 源站
    ▼
-EdgeOne（免费版：国内节点 + 全球加速 + 自动 HTTPS + DDoS/WAF）  ← 加速层
-   ▼
-CNB 仓库（cnb.cool）+ EdgeOne Pages（托管绿皮书静态文件）        ← 源站
+CNB 仓库（cnb.cool）+ EdgeOne Pages（托管绿皮书静态文件）        ← 源码
 ```
+
+> 如需自有域名（如 workbuddy.wangjin.site），再在 EdgeOne 绑自定义域名 + DNSPod 改 CNAME 即可。目前直接用 EdgeOne 默认域名。
 
 两种方式任选其一：
 
@@ -28,8 +28,8 @@ EdgeOne 网络。托管+加速都在 EdgeOne 上，免费、国内快。
 ### 方式 B（最贴合原话：CNB 托管 + EdgeOne 仅加速）
 CNB Pages 作为源站，EdgeOne 仅做 CDN 加速（CNAME 接入）。
 - CNB 仓库开 Pages（控制台一键），拿到 `*.pages.cnb.run` 源站域名；
-- EdgeOne 加站点 `workbuddy.wangjin.site`，源站填 CNB Pages 域名，CNAME 接入；
-- DNS：`workbuddy` CNAME → EdgeOne 分配的加速域名。
+- EdgeOne 加站点（自定义域名可选），源站填 CNB Pages 域名，CNAME 接入；
+- DNS：`workbuddy` CNAME → EdgeOne 分配的加速域名（仅当使用自有域名时）。
 
 ---
 
@@ -48,14 +48,15 @@ CNB Pages 作为源站，EdgeOne 仅做 CDN 加速（CNAME 接入）。
    - EdgeOne Pages 控制台生成 API Token；
    - 在 CNB 仓库「变量/密钥」里新增 `EDGEONE_API_TOKEN`，值填该 Token。
 
-4. **绑定自定义域名**
-   - EdgeOne Pages 项目里添加自定义域名 `workbuddy.wangjin.site`，按提示验证；
-   - 拿到 EdgeOne 分配的 CNAME（如 `workbuddy.wangjin.site.eo.dnse*.com`）。
+4. **（可选）绑定自定义域名**
+   - 如需自有域名（如 `workbuddy.wangjin.site`），在 EdgeOne Pages 项目里添加，按提示验证；
+   - 拿到 EdgeOne 分配的 CNAME（如 `xxx.eo.dnse*.com`）。
 
-5. **改 DNS（关键）**
-   - 去腾讯云 DNSPod，把 `workbuddy` 的 CNAME 值从 `goodtimeggb.github.io`
+5. **（可选）改 DNS**
+   - 去腾讯云 DNSPod，把自定义域名的 CNAME 值
      **改成第 4 步 EdgeOne 给的加速域名**。
-   - 等 5–30 分钟传播，访问 `http://workbuddy.wangjin.site/` 即上线。
+   - 等 5–30 分钟传播，访问自定义域名即上线；当前默认官方地址为
+     `https://mywebsite-czco0bz4.edgeone.cool`。
    - 生效后 EdgeOne 自动签发 HTTPS，控制台勾选 Enforce HTTPS。
 
 6. **自动部署**
@@ -72,5 +73,5 @@ CNB Pages 作为源站，EdgeOne 仅做 CDN 加速（CNAME 接入）。
 
 ## 待你操作
 - [ ] 连接 WorkBuddy 里的 **CNB** 与 **EdgeOne / EdgeOne Pages** 连接器（或网页端手动完成上面 1–5 步）
-- [ ] 改 DNS 指向 EdgeOne
+- [ ] （可选）如需自有域名，改 DNS 指向 EdgeOne
 - [ ] 旧的 workbuddy.link 页面（误建的）建议取消发布，避免读者分流
